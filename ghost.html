@@ -1,0 +1,20 @@
+<marquee scrollamount="101"><img src="ghost.png" onclick="getpaypal();" /></marquee>
+
+
+
+<script>
+var chars = "abcdefghijklmnopqrstuvwxyz0123456789"
+var rc = function() {
+    return chars[parseInt(Math.random() * chars.length)];
+};
+
+var sk = 'aaaa-aaaa-aaaa-aaaa';
+
+function getpaypal() {
+
+alert(sk.replace(/[a-z]/g, function () {
+    return rc().toUpperCase();
+}));
+
+}
+</script>
